@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+/*estilo general*/
+
+body {
+    background-color: rgb(228, 227, 227);
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+header {
+    display: grid;
+}
+
+.logo {
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav {
+    font-family: 'Nunito', sans-serif;
+    display: grid;
+}
+
+main {
+    display: grid;
+}
+
+/*galeria*/
+
+.galeria {
+    margin: 5px;
+}
+
+.three-columns {
+    display: inline-block;
+}
+
+img {
+    border-radius: 4px;
+}
+
+button {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+/*transformacion de color*/
+
+button:hover {
+    background-color: rgb(167, 161, 161);
+}
+
+button.btn {
+    background-color: black;
+    border: 3px solid white;
+}
+
+button.btn:hover {
+    background-color: rgb(184, 108, 108);
+}
+
+li a:visited {
+    color: red;
+}
+
+.letraFooter:visited {
+    color: red;
+}
+/*tipografia*/
+
+h1 {
+    font-size: 2em;
+    margin: 15px;
+}
+
+h2, h3 {
+    font-size: 1.50em;
+}
+
+p {
+    font-size: 1.25em;
+    padding: 10px;
+}
+
+li a {
+    font-weight: bold;
+}
+
+.letraFooter {
+    font-size: 0.80em;
+}
+
+/*secciones*/
+
+section {
+    font-family: 'Nunito', sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+
+section#presentacion {
+    padding: 10px 12px;
+    margin: 10px 10px;
+}
+
+aside {
+    display: grid;
+    margin: 10px;
+}
+
+/*footer*/
+
+footer {
+    display: grid;
+    padding: 20px;
+}
+
+/*areas*/
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.grilla {
+    background-color: rgb(214, 214, 214);
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+}
+
+/*mobile*/
+
+@media (min-width:414px) {
+    .grilla {
+        margin: 0;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        background-color: black;
+    }
+
+    .logo {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    nav {
+        font-display: flex;
+        font-family: 'Nunito', sans-serif;
+        background-color: black;
+    }
+
+    ul li {
+        margin: 10px;
+    }
+
+    li a {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    li a:hover {
+        color: rgb(172, 156, 156);
+    }
+
+    main {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    h1, p {
+        font-family: 'Nunito', sans-serif;
+        color: black;
+    }
+
+    form {
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .three-columns img{
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .claro {
+        border: 15px solid black;
+    }
+
+    footer {
+        background-color: black;
+    }
+
+    footer p {
+        color: white;
+        font-weight: bold;
+        font-size: 0.80em;
+    }
+
+    footer img {
+        background-color: white;
+        padding: 3px;
+    }
+
+    .letraFooter {
+        color: white;
+        font-weight: bold;
+        padding: 4px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .letraFooter:hover {
+        color: rgb(172, 156, 156);
+    }
+}
+
+/*tablet*/
+
+@media (min-width:768px) {
+    .grilla {
+        grid-template-areas:
+            "header header"
+            "nav    main"
+            "nav    aside"
+            "footer footer";
+        grid-template-columns: 2fr;
+    }
+
+    header {
+        background-color: black;
+    }
+
+    .logo {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    nav {
+        flex-direction: column;
+        font-family: 'Nunito', sans-serif;
+        background-color: rgb(0, 0, 0);
+    }
+
+    nav.container {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul li {
+        margin: 10px;
+    }
+
+    li a {
+        color: white;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    main {
+        font-family: 'Nunito', sans-serif;
+        color: black;
+    }
+
+    h1, p {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    form {
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        margin: 15px;
+        padding: 10px;
+    }
+
+    .three-columns img{
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .claro {
+        border: 10px solid black;
+    }
+
+    footer {
+        background-color: black;
+    }
+
+    footer p {
+        color: white;
+        font-size: 0.80em;
+    }
+
+    footer img {
+        background-color: white;
+    }
+
+    .letraFooter {
+        color: white;
+        padding: 4px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .letraFooter:hover {
+        color: rgb(65, 44, 44);
+    }
+}
+
+/*desktop*/
+
+@media (min-width:1024px) {
+    .grilla {
+        grid-template-areas:
+            "header header header"
+            "nav    nav    nav"
+            "main   main   main"
+            "aside  aside  aside"
+            "footer footer footer";
+        grid-template-columns: 3fr;
+        margin: auto;
+        padding: auto;
+    }
+
+    header {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .logo {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        font-family: 'Nunito', sans-serif;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .container {
+        max-width: initial;
+    }
+
+    ol, ul {
+        margin-bottom: 0rem;
+        padding-left: 0rem;
+    }
+
+    ul li {
+        display: inline-block;
+    }
+
+    li a {
+        color: black;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 10px;
+    }
+
+    li a:hover {
+        color: rgb(145, 128, 128);
+    }
+
+    main {
+        font-family: 'Nunito', sans-serif;
+        margin: 50px;
+        padding: 15px;
+    }
+
+    h1{
+        font-family: 'Nunito', sans-serif;
+        font-size: 2em;
+        margin: 15px;
+        font: 0;
+    }
+
+    .claro {
+        border: 10px solid rgb(255, 0, 0);
+        
+    }
+
+    form {
+        margin: 15px;
+        padding: 10px;
+    }
+
+    label {
+        color: rgb(5, 5, 5);
+        font-family: 'Nunito', sans-serif;
+    }
+
+    button.btn {
+        background-color: rgb(255, 255, 255);
+        border: 3px solid rgb(248, 0, 0);
+        color: black;
+    }
+    
+    button.btn:hover {
+        background-color: rgb(255, 0, 0);
+    }
+    
+    footer {
+        font-family: 'Nunito', sans-serif;
+        color: black;
+        margin: 0;
+        background-color: rgb(255, 255, 255);
+    }
+
+    footer p {
+        color: rgb(0, 0, 0);
+        font-size: 0.85em;
+        font-weight: bold;
+    }
+
+    .letraFooter {
+        color: rgb(5, 5, 5);
+        padding: 4px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .letraFooter:hover {
+        color: rgb(160, 132, 132);
+    }
+}
